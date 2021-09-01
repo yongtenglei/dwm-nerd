@@ -1,6 +1,6 @@
 #include <X11/XF86keysym.h>
 /* appearance */
-static const unsigned int borderpx = 0; /* border pixel of windows */
+static const unsigned int borderpx = 2; /* border pixel of windows */
 static const unsigned int gappx = 5;    /* gaps between windows */
 static const unsigned int snap = 32;    /* snap pixel */
 static const unsigned int systraypinning =
@@ -15,7 +15,7 @@ static const int smartgaps =
 static const int showbar = 1;   /* 0 means no bar */
 static const int topbar = 1;    /* 0 means botom bar */
 static const int viewontag = 1; /* Switch view on tag switch */
-static const char *fonts[] = {"Fira Code:size=10:antialias=true:autohint=true"};
+static const char *fonts[] = {"Fira Code:size=9:antialias=true:autohint=true"};
 static const char dmenufont[] =
     "Fira Code:size=10:antialias=true:autohint=true";
 // static const char col_gray1[] = "#222222";
@@ -24,11 +24,11 @@ static const char dmenufont[] =
 // static const char col_gray4[] = "#ffffff";
 
 // gruvbox dark
-static const char col_gray1[] = "#282828";
-static const char col_gray2[] = "#3c3836";
-static const char col_gray3[] = "#ebdbb2";
-static const char col_gray4[] = "#fdf1c7";
-static const char col_cyan[] = "#d79921";
+// static const char col_gray1[] = "#282828";
+// static const char col_gray2[] = "#3c3836";
+// static const char col_gray3[] = "#ebdbb2";
+// static const char col_gray4[] = "#fdf1c7";
+// static const char col_cyan[] = "#d79921";
 
 // gruvbox light
 // static const char col_gray1[] = "#fdf1c7";
@@ -37,24 +37,58 @@ static const char col_cyan[] = "#d79921";
 // static const char col_gray4[] = "#282828";
 // static const char col_cyan[] = "#fabd2f";
 
-static const char col_border[] = "#42A5F5";
+// static const char col_border[] = "#42A5F5";
 static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
-static const char *colors[][3] = {
-    /*               fg         bg         border   */
-    [SchemeNorm] = {col_gray3, col_gray1, col_gray2},
-    [SchemeSel] = {col_gray4, col_cyan, col_border},
-    [SchemeHid] = {col_cyan, col_gray1, col_border},
+// static const char *colors[][3] = {
+//[>               fg         bg         border   <]
+//[SchemeNorm] = {col_gray3, col_gray1, col_gray2},
+//[SchemeSel] = {col_gray4, col_cyan, col_border},
+//[SchemeHid] = {col_cyan, col_gray1, col_border},
+//};
+static char normbgcolor[] = "#2E3440";
+static char normbordercolor[] = "#3B4252";
+static char normfgcolor[] = "#ECEFF4";
+static char selfgcolor[] = "#D8DEE9";
+static char selbordercolor[] = "#5E81AC";
+static char selbgcolor[] = "#5E81AC";
+static char termcol0[] = "#3b4252";  /* black   */
+static char termcol1[] = "#bf616a";  /* red     */
+static char termcol2[] = "#a3be8c";  /* green   */
+static char termcol3[] = "#ebcb8b";  /* yellow  */
+static char termcol4[] = "#81a1c1";  /* blue    */
+static char termcol5[] = "#b48ead";  /* magenta */
+static char termcol6[] = "#88c0d0";  /* cyan    */
+static char termcol7[] = "#e5e9f0";  /* white   */
+static char termcol8[] = "#4c566a";  /* black   */
+static char termcol9[] = "#bf616a";  /* red     */
+static char termcol10[] = "#a3be8c"; /* green   */
+static char termcol11[] = "#ebcb8b"; /* yellow  */
+static char termcol12[] = "#81a1c1"; /* blue    */
+static char termcol13[] = "#b48ead"; /* magenta */
+static char termcol14[] = "#8fbcbb"; /* cyan    */
+static char termcol15[] = "#eceff4"; /* white   */
+static char *termcolor[] = {
+    termcol0,  termcol1,  termcol2,  termcol3,  termcol4,  termcol5,
+    termcol6,  termcol7,  termcol8,  termcol9,  termcol10, termcol11,
+    termcol12, termcol13, termcol14, termcol15,
 };
+static char *colors[][3] = {
+    /*               fg           bg           border   */
+    [SchemeNorm] = {normfgcolor, normbgcolor, normbordercolor},
+    [SchemeSel] = {selfgcolor, selbgcolor, selbordercolor},
+};
+
 static const unsigned int alphas[][3] = {
-    /*               fg      bg        border     */
     [SchemeNorm] = {OPAQUE, baralpha, borderalpha},
     [SchemeSel] = {OPAQUE, baralpha, borderalpha},
 };
 
 /* tagging */
-static const char *tags[] = {"\uf120", "\uf7ae", "\uf121", "\uf04b", "\ue62e",
-                             "\uf251", "\ue727", "\uf537", "\uf684"};
+// static const char *tags[] = {"\uf120", "\uf7ae", "\uf121", "\uf04b",
+// "\ue62e",
+//"\uf251", "\ue727", "\uf537", "\uf684"};
+static const char *tags[] = {"", "", "", "", "", "", "", "", ""};
 
 static const Rule rules[] = {
     /* xprop(1):
