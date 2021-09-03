@@ -15,7 +15,10 @@ static const int smartgaps =
 static const int showbar = 1;   /* 0 means no bar */
 static const int topbar = 1;    /* 0 means botom bar */
 static const int viewontag = 1; /* Switch view on tag switch */
-static const char *fonts[] = {"Fira Code:size=9:antialias=true:autohint=true"};
+// static const char *fonts[] = {"Fira
+// Code:size=9:antialias=true:autohint=true"};
+static const char *fonts[] = {
+    "FiraCode Nerd Font:size=9:antialias=true:autohint=true"};
 static const char dmenufont[] =
     "Fira Code:size=10:antialias=true:autohint=true";
 // static const char col_gray1[] = "#222222";
